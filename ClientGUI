@@ -1,0 +1,271 @@
+package sample;
+
+import javafx.scene.control.TextArea;
+import java.util.HashMap;
+import java.util.Iterator;
+import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.geometry.Insets;
+import javafx.scene.Group;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.scene.text.Text;
+
+public class Main extends Application {
+
+    private Parent createContent() {
+        Text portTextC = new Text("Enter the port number:");
+        TextField portInput = new TextField();
+        portInput.setId("textfield");
+        portInput.setPromptText("e.g. 5555");
+        portInput.setPrefHeight(20);
+        portInput.setMaxWidth(140);
+
+        Text ipTextC = new Text("Enter the IP Address");
+        TextField ipAddress = new TextField();
+        ipAddress.setId("textfield");
+        ipAddress.setPromptText("e.g. 127.0.0.1");
+        ipAddress.setPrefHeight(20);
+        ipAddress.setMaxWidth(140);
+
+        Button r1c1 = new Button();
+        Button r1c2 = new Button();
+        Button r1c3 = new Button();
+        Button r1c4 = new Button();
+        Button r1c5 = new Button();
+        Button r2c1 = new Button();
+        Button r2c2 = new Button();
+        Button r2c3 = new Button();
+        Button r2c4 = new Button();
+        Button r2c5 = new Button();
+        Button r3c1 = new Button();
+        Button r3c2 = new Button();
+        Button r3c3 = new Button();
+        Button r3c4 = new Button();
+        Button r3c5 = new Button();
+        Button r4c1 = new Button();
+        Button r4c2 = new Button();
+        Button r4c3 = new Button();
+        Button r4c4 = new Button();
+        Button r4c5 = new Button();
+        Button r5c1 = new Button();
+        Button r5c2 = new Button();
+        Button r5c3 = new Button();
+        Button r5c4 = new Button();
+        Button r5c5 = new Button();
+
+
+        Image r1c1Pic = new Image("r1c1.png");
+        ImageView r1c1View = new ImageView(r1c1Pic);
+        r1c1View.setFitHeight(65);
+        r1c1View.setFitWidth(65);
+        r1c1View.setPreserveRatio(true);
+        r1c1.setGraphic(r1c1View);
+
+        Image r1c2Pic = new Image("r1c2.png");
+        ImageView r1c2View = new ImageView(r1c2Pic);
+        r1c2View.setFitHeight(65);
+        r1c2View.setFitWidth(65);
+        r1c2View.setPreserveRatio(true);
+        r1c2.setGraphic(r1c2View);
+
+        Image r1c3Pic = new Image("r1c3.png");
+        ImageView r1c3View = new ImageView(r1c3Pic);
+        r1c3View.setFitHeight(65);
+        r1c3View.setFitWidth(65);
+        r1c3View.setPreserveRatio(true);
+        r1c3.setGraphic(r1c3View);
+
+        Image r1c4Pic = new Image("r1c4.png");
+        ImageView r1c4View = new ImageView(r1c4Pic);
+        r1c4View.setFitHeight(65);
+        r1c4View.setFitWidth(65);
+        r1c4View.setPreserveRatio(true);
+        r1c4.setGraphic(r1c4View);
+
+        Image r1c5Pic = new Image("r1c5.png");
+        ImageView r1c5View = new ImageView(r1c5Pic);
+        r1c5View.setFitHeight(65);
+        r1c5View.setFitWidth(65);
+        r1c5View.setPreserveRatio(true);
+        r1c5.setGraphic(r1c5View);
+
+        Image r2c1Pic = new Image("r2c1.png");
+        ImageView r2c1View = new ImageView(r2c1Pic);
+        r2c1View.setFitHeight(65);
+        r2c1View.setFitWidth(65);
+        r2c1View.setPreserveRatio(true);
+        r2c1.setGraphic(r2c1View);
+
+        Image r2c2Pic = new Image("r2c2.png");
+        ImageView r2c2View = new ImageView(r2c2Pic);
+        r2c2View.setFitHeight(65);
+        r2c2View.setFitWidth(65);
+        r2c2View.setPreserveRatio(true);
+        r2c2.setGraphic(r2c2View);
+
+        Image r2c3Pic = new Image("r2c3.png");
+        ImageView r2c3View = new ImageView(r2c3Pic);
+        r2c3View.setFitHeight(65);
+        r2c3View.setFitWidth(65);
+        r2c3View.setPreserveRatio(true);
+        r2c3.setGraphic(r2c3View);
+
+        Image r2c4Pic = new Image("r2c4.png");
+        ImageView r2c4View = new ImageView(r2c4Pic);
+        r2c4View.setFitHeight(65);
+        r2c4View.setFitWidth(65);
+        r2c4View.setPreserveRatio(true);
+        r2c4.setGraphic(r2c4View);
+
+        Image r2c5Pic = new Image("r2c5.png");
+        ImageView r2c5View = new ImageView(r2c5Pic);
+        r2c5View.setFitHeight(65);
+        r2c5View.setFitWidth(65);
+        r2c5View.setPreserveRatio(true);
+        r2c5.setGraphic(r2c5View);
+
+        Image r3c1Pic = new Image("r3c1.png");
+        ImageView r3c1View = new ImageView(r3c1Pic);
+        r3c1View.setFitHeight(65);
+        r3c1View.setFitWidth(65);
+        r3c1View.setPreserveRatio(true);
+        r3c1.setGraphic(r3c1View);
+
+        Image r3c2Pic = new Image("r3c2.png");
+        ImageView r3c2View = new ImageView(r3c2Pic);
+        r3c2View.setFitHeight(65);
+        r3c2View.setFitWidth(65);
+        r3c2View.setPreserveRatio(true);
+        r3c2.setGraphic(r3c2View);
+
+        Image r3c3Pic = new Image("r3c3.png");
+        ImageView r3c3View = new ImageView(r3c3Pic);
+        r3c3View.setFitHeight(65);
+        r3c3View.setFitWidth(65);
+        r3c3View.setPreserveRatio(true);
+        r3c3.setGraphic(r3c3View);
+
+        Image r3c4Pic = new Image("r3c4.png");
+        ImageView r3c4View = new ImageView(r3c4Pic);
+        r3c4View.setFitHeight(65);
+        r3c4View.setFitWidth(65);
+        r3c4View.setPreserveRatio(true);
+        r3c4.setGraphic(r3c4View);
+
+        Image r3c5Pic = new Image("r3c5.png");
+        ImageView r3c5View = new ImageView(r3c5Pic);
+        r3c5View.setFitHeight(65);
+        r3c5View.setFitWidth(65);
+        r3c5View.setPreserveRatio(true);
+        r3c5.setGraphic(r3c5View);
+
+        Image r4c1Pic = new Image("r4c1.png");
+        ImageView r4c1View = new ImageView(r4c1Pic);
+        r4c1View.setFitHeight(65);
+        r4c1View.setFitWidth(65);
+        r4c1View.setPreserveRatio(true);
+        r4c1.setGraphic(r4c1View);
+
+        Image r4c2Pic = new Image("r4c2.png");
+        ImageView r4c2View = new ImageView(r4c2Pic);
+        r4c2View.setFitHeight(65);
+        r4c2View.setFitWidth(65);
+        r4c2View.setPreserveRatio(true);
+        r4c2.setGraphic(r4c2View);
+
+        Image r4c3Pic = new Image("r4c3.png");
+        ImageView r4c3View = new ImageView(r4c3Pic);
+        r4c3View.setFitHeight(65);
+        r4c3View.setFitWidth(65);
+        r4c3View.setPreserveRatio(true);
+        r4c3.setGraphic(r4c3View);
+
+        Image r4c4Pic = new Image("r4c4.png");
+        ImageView r4c4View = new ImageView(r4c4Pic);
+        r4c4View.setFitHeight(65);
+        r4c4View.setFitWidth(65);
+        r4c4View.setPreserveRatio(true);
+        r4c4.setGraphic(r4c4View);
+
+        Image r4c5Pic = new Image("r4c5.png");
+        ImageView r4c5View = new ImageView(r4c5Pic);
+        r4c5View.setFitHeight(65);
+        r4c5View.setFitWidth(65);
+        r4c5View.setPreserveRatio(true);
+        r4c5.setGraphic(r4c5View);
+
+        Image r5c1Pic = new Image("r5c1.png");
+        ImageView r5c1View = new ImageView(r5c1Pic);
+        r5c1View.setFitHeight(65);
+        r5c1View.setFitWidth(65);
+        r5c1View.setPreserveRatio(true);
+        r5c1.setGraphic(r5c1View);
+
+        Image r5c2Pic = new Image("r5c2.png");
+        ImageView r5c2View = new ImageView(r5c2Pic);
+        r5c2View.setFitHeight(65);
+        r5c2View.setFitWidth(65);
+        r5c2View.setPreserveRatio(true);
+        r5c2.setGraphic(r5c2View);
+
+        Image r5c3Pic = new Image("r5c3.png");
+        ImageView r5c3View = new ImageView(r5c3Pic);
+        r5c3View.setFitHeight(65);
+        r5c3View.setFitWidth(65);
+        r5c3View.setPreserveRatio(true);
+        r5c3.setGraphic(r5c3View);
+
+        Image r5c4Pic = new Image("r5c4.png");
+        ImageView r5c4View = new ImageView(r5c4Pic);
+        r5c4View.setFitHeight(65);
+        r5c4View.setFitWidth(65);
+        r5c4View.setPreserveRatio(true);
+        r5c4.setGraphic(r5c4View);
+
+        Image r5c5Pic = new Image("r5c5.png");
+        ImageView r5c5View = new ImageView(r5c5Pic);
+        r5c5View.setFitHeight(65);
+        r5c5View.setFitWidth(65);
+        r5c5View.setPreserveRatio(true);
+        r5c5.setGraphic(r5c5View);
+
+        HBox row1 = new HBox(0, r1c1View,r1c2View,r1c3View,r1c4View,r1c5View);
+        HBox row2 = new HBox(0, r2c1View,r2c2View,r2c3View,r2c4View,r2c5View);
+        HBox row3 = new HBox(0, r3c1View,r3c2View,r3c3View,r3c4View,r3c5View);
+        HBox row4 = new HBox(0, r4c1View,r4c2View,r4c3View,r4c4View,r4c5View);
+        HBox row5 = new HBox(0, r5c1View,r5c2View,r5c3View,r5c4View,r5c5View);
+
+
+        VBox root = new VBox(0, portTextC,portInput, ipTextC, ipAddress, row1,row2,row3,row4,row5);
+        root.setPrefSize(600, 600);
+        return root;
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+
+        primaryStage.setScene(new Scene(createContent()));
+
+        BorderPane pane = new BorderPane();
+        pane.setCenter(root);
+
+        primaryStage.show();
+
+    }
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
